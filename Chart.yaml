@@ -1,0 +1,5 @@
+apiVersion: v2
+name: cloudwatch-agent
+description: CloudWatch Agent to monitor metrics
+version: 0.1.0
+type: application

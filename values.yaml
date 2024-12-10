@@ -1,0 +1,21 @@
+image:
+  repository: amazon/cloudwatch-agent
+  tag: latest
+  pullPolicy: IfNotPresent
+
+config:
+  scrapeInterval: 60
+  targetService: "litellm"
+  targetPort: 4000
+  region: "eu-west-1"
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 512Mi
+
+serviceAccount:
+  create: false 
